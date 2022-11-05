@@ -235,6 +235,13 @@ img {
   color: #14213d;
 }
 
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
 .error {
   background-color: #14213d;
   color: #fff;

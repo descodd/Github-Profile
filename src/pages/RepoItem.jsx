@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useContext } from "react";
+import { useParams, Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import GithubUserContext from "../contextAPI/GithubUserContext";
 
@@ -24,11 +24,16 @@ function RepoItem() {
         <p>watchers : {repo.watchers}</p>
         <p>open issues : {repo.open_issues}</p>
         <p>created_at : {repo.created_at}</p>
-        <button className="btn">
-          <a target="_blank" rel="noreferrer" href={repo.html_url}>
-            view on github
-          </a>
-        </button>
+        <div className="buttons">
+          <button className="btn">
+            <a target="_blank" rel="noreferrer" href={repo.html_url}>
+              view on github
+            </a>
+          </button>
+          <button className="btn">
+            <Link to="/repo">Back</Link>
+          </button>
+        </div>
       </div>
     </div>
   );
