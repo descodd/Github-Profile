@@ -10,8 +10,8 @@ export const GithubProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [repoPerPage] = useState(6);
 
-  const url = "https://api.github.com";
-  const token = "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";
+  const url = process.env.REACT_APP_GITHUB_URL;
+  const token = process.env.REACT_APP_GITHUB_TOKEN;
 
   useEffect(() => {
     fetchUser();
