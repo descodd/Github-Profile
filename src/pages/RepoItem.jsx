@@ -27,7 +27,7 @@ function RepoItem() {
         <div className="buttons">
           <button className="btn">
             <a target="_blank" rel="noreferrer" href={repo.html_url}>
-              view on github
+              View on Github
             </a>
           </button>
           <button className="btn">
